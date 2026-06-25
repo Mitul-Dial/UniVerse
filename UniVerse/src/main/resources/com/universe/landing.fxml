@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.universe.controllers.LandingController"
+           fx:id="landingStackRoot">
+
+    <!-- Background blob pane (behind all content) -->
+    <Pane fx:id="blobPane" mouseTransparent="true"/>
+
+    <ScrollPane fx:id="landingScroll" fitToWidth="true" hbarPolicy="NEVER" styleClass="landing-scroll">
+
+        <VBox styleClass="landing-root" fx:id="landingRoot">
+
+            <!-- ═══ NAVBAR ═══ -->
+            <HBox styleClass="navbar" fx:id="navbar" alignment="CENTER_LEFT" spacing="0">
+                <padding><Insets top="0" right="32" bottom="0" left="32"/></padding>
+
+                <HBox styleClass="nav-logo" alignment="CENTER_LEFT" spacing="10">
+                    <Label text="UniVerse" styleClass="nav-logo-text"/>
+                </HBox>
+
+                <HBox styleClass="nav-links" alignment="CENTER_LEFT" spacing="4">
+                    <HBox.margin><Insets left="24"/></HBox.margin>
+                    <Button text="Features" styleClass="nav-link" fx:id="navFeatures"/>
+                    <Button text="How it works" styleClass="nav-link" fx:id="navHow"/>
+                    <Button text="About" styleClass="nav-link" fx:id="navAbout"/>
+                </HBox>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <HBox styleClass="nav-actions" alignment="CENTER_RIGHT" spacing="10">
+                    <Button text="Sign in" styleClass="btn-ghost" fx:id="btnSignIn" onAction="#handleOpenDashboard"/>
+                    <Button text="Get started" styleClass="btn-primary" fx:id="btnGetStarted" onAction="#handleGetStarted"/>
+                </HBox>
+            </HBox>
+
+            <!-- ═══ HERO SECTION ═══ -->
+            <VBox styleClass="hero-section" alignment="CENTER" spacing="0" fx:id="heroSection">
+                <padding><Insets top="120" right="32" bottom="80" left="32"/></padding>
+                <StackPane fx:id="heroIntroContainer" maxWidth="1100" minHeight="320" prefHeight="320">
+                    <Canvas fx:id="heroIntroCanvas"/>
+                    <HBox alignment="CENTER" spacing="0" fx:id="heroTitleBox" opacity="0">
+                        <Label fx:id="heroL0" text="U" styleClass="hero-title-letter,hero-letter-red"/>
+                        <Label fx:id="heroL1" text="n" styleClass="hero-title-letter,hero-letter-blue"/>
+                        <Label fx:id="heroL2" text="i" styleClass="hero-title-letter,hero-letter-yellow"/>
+                        <Label fx:id="heroL3" text="V" styleClass="hero-title-letter,hero-letter-green"/>
+                        <Label fx:id="heroL4" text="e" styleClass="hero-title-letter,hero-letter-red2"/>
+                        <Label fx:id="heroL5" text="r" styleClass="hero-title-letter,hero-letter-blue2"/>
+                        <Label fx:id="heroL6" text="s" styleClass="hero-title-letter,hero-letter-yellow2"/>
+                        <Label fx:id="heroL7" text="e" styleClass="hero-title-letter,hero-letter-green2"/>
+                    </HBox>
+                </StackPane>
+
+                <!-- Subtitle - starts invisible -->
+                <Label styleClass="hero-subtitle" wrapText="true" maxWidth="560" textAlignment="CENTER"
+                       fx:id="heroSub" opacity="0" translateY="20"
+                       text="UniVerse connects students, societies, and sponsors on a single platform — so no event goes unnoticed and no opportunity gets missed."/>
+            </VBox>
+
+            <!-- ═══ STATS SECTION ═══ -->
+            <VBox styleClass="stats-section" spacing="0" fx:id="statsSection">
+                <padding><Insets top="80" right="80" bottom="60" left="80"/></padding>
+
+                <!-- Colored divider line / beam track -->
+                <StackPane fx:id="beamTrack" maxHeight="6" minHeight="6" prefHeight="6">
+                    <Region styleClass="stats-divider-line-bg" prefHeight="6" maxHeight="6"/>
+                    <Region fx:id="beamBar" styleClass="stats-divider-line" prefHeight="6" maxHeight="6" scaleX="0"/>
+                    <VBox.margin><Insets bottom="60"/></VBox.margin>
+                </StackPane>
+
+                <GridPane styleClass="stats-grid" hgap="32" alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="25"/>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="25"/>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="25"/>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="25"/>
+                    </columnConstraints>
+
+                    <!-- Stat 1 -->
+                    <VBox alignment="CENTER" spacing="6" GridPane.columnIndex="0" styleClass="stat-item" fx:id="stat0" opacity="0" translateY="30">
+                        <HBox alignment="CENTER" spacing="0">
+                            <Label text="3" styleClass="stat-number"/>
+                            <Label text="+" styleClass="stat-accent,stat-accent-red"/>
+                        </HBox>
+                        <Label text="Universities" styleClass="stat-label"/>
+                        <Region styleClass="stat-divider,stat-divider-red" prefWidth="40" prefHeight="2" maxWidth="40" maxHeight="2"/>
+                    </VBox>
+
+                    <!-- Stat 2 -->
+                    <VBox alignment="CENTER" spacing="6" GridPane.columnIndex="1" styleClass="stat-item" fx:id="stat1" opacity="0" translateY="30">
+                        <HBox alignment="CENTER" spacing="0">
+                            <Label text="12" styleClass="stat-number"/>
+                            <Label text="+" styleClass="stat-accent,stat-accent-yellow"/>
+                        </HBox>
+                        <Label text="Active Societies" styleClass="stat-label"/>
+                        <Region styleClass="stat-divider,stat-divider-yellow" prefWidth="40" prefHeight="2" maxWidth="40" maxHeight="2"/>
+                    </VBox>
+
+                    <!-- Stat 3 -->
+                    <VBox alignment="CENTER" spacing="6" GridPane.columnIndex="2" styleClass="stat-item" fx:id="stat2" opacity="0" translateY="30">
+                        <HBox alignment="CENTER" spacing="0">
+                            <Label text="200" styleClass="stat-number"/>
+                            <Label text="+" styleClass="stat-accent,stat-accent-green"/>
+                        </HBox>
+                        <Label text="Students Registered" styleClass="stat-label"/>
+                        <Region styleClass="stat-divider,stat-divider-green" prefWidth="40" prefHeight="2" maxWidth="40" maxHeight="2"/>
+                    </VBox>
+
+                    <!-- Stat 4 -->
+                    <VBox alignment="CENTER" spacing="6" GridPane.columnIndex="3" styleClass="stat-item" fx:id="stat3" opacity="0" translateY="30">
+                        <HBox alignment="CENTER" spacing="0">
+                            <Label text="24" styleClass="stat-number"/>
+                            <Label text="+" styleClass="stat-accent,stat-accent-blue"/>
+                        </HBox>
+                        <Label text="Events This Semester" styleClass="stat-label"/>
+                        <Region styleClass="stat-divider,stat-divider-blue" prefWidth="40" prefHeight="2" maxWidth="40" maxHeight="2"/>
+                    </VBox>
+                </GridPane>
+            </VBox>
+
+            <!-- ═══ FEATURES SECTION ═══ -->
+            <VBox styleClass="features-section" spacing="0" fx:id="featuresSection" opacity="0" translateY="24">
+                <padding><Insets top="96" right="80" bottom="96" left="80"/></padding>
+
+                <Label text="BUILT FOR EVERYONE" styleClass="section-eyebrow"/>
+                <Label text="One platform.&#10;Three perspectives." styleClass="section-title" wrapText="true"/>
+                <Label text="UniVerse is designed around how university life actually works — every role gets exactly what they need."
+                       styleClass="section-subtitle" wrapText="true" maxWidth="500"/>
+
+                <GridPane styleClass="features-grid" hgap="20" vgap="20" alignment="CENTER">
+                    <VBox.margin><Insets top="56"/></VBox.margin>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="33.3"/>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="33.3"/>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="33.3"/>
+                    </columnConstraints>
+
+                    <!-- Card 1: Students (Blue) -->
+                    <VBox styleClass="feature-card,fc-blue" GridPane.columnIndex="0" spacing="0"
+                          fx:id="featureCard0" opacity="0" translateX="-160">
+                        <VBox spacing="0" styleClass="feature-card-inner">
+                            <padding><Insets top="28" right="24" bottom="28" left="24"/></padding>
+                            <StackPane styleClass="feature-icon,feature-icon-blue" maxWidth="48" maxHeight="48" minWidth="48" minHeight="48" alignment="CENTER">
+                                <Label text="🎓" style="-fx-font-size: 22px;"/>
+                            </StackPane>
+                            <Label text="STUDENTS" styleClass="feature-tag,feature-tag-blue">
+                                <VBox.margin><Insets top="12"/></VBox.margin>
+                            </Label>
+                            <Label text="Never miss an event" styleClass="feature-card-title">
+                                <VBox.margin><Insets top="10"/></VBox.margin>
+                            </Label>
+                            <Label text="Browse upcoming events, register in one click, and get notifications for everything happening at your campus."
+                                   styleClass="feature-card-desc" wrapText="true">
+                                <VBox.margin><Insets top="8"/></VBox.margin>
+                            </Label>
+                            <VBox styleClass="feature-list" spacing="6">
+                                <VBox.margin><Insets top="14"/></VBox.margin>
+                                <HBox alignment="CENTER_LEFT" spacing="8">
+                                    <Circle radius="2.5" fill="#1a73e8"/>
+                                    <Label text="Browse &amp; filter events" styleClass="feature-list-item"/>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="8">
+                                    <Circle radius="2.5" fill="#1a73e8"/>
+                                    <Label text="One-click registration" styleClass="feature-list-item"/>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="8">
+                                    <Circle radius="2.5" fill="#1a73e8"/>
+                                    <Label text="Smart notifications" styleClass="feature-list-item"/>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="8">
+                                    <Circle radius="2.5" fill="#1a73e8"/>
+                                    <Label text="Track your registrations" styleClass="feature-list-item"/>
+                                </HBox>
+                            </VBox>
+                        </VBox>
+                    </VBox>
+
+                    <!-- Card 2: Societies (Green) -->
+                    <VBox styleClass="feature-card,fc-green" GridPane.columnIndex="1" spacing="0"
+                          fx:id="featureCard1" opacity="0" translateX="-160">
+                        <VBox spacing="0" styleClass="feature-card-inner">
+                            <padding><Insets top="28" right="24" bottom="28" left="24"/></padding>
+                            <StackPane styleClass="feature-icon,feature-icon-green" maxWidth="48" maxHeight="48" minWidth="48" minHeight="48" alignment="CENTER">
+                                <Label text="💼" style="-fx-font-size: 22px;"/>
+                            </StackPane>
+                            <Label text="SOCIETIES" styleClass="feature-tag,feature-tag-green">
+                                <VBox.margin><Insets top="12"/></VBox.margin>
+                            </Label>
+                            <Label text="Manage your society like a pro" styleClass="feature-card-title">
+                                <VBox.margin><Insets top="10"/></VBox.margin>
+                            </Label>
+                            <Label text="Create events, post announcements, view registrations, and coordinate with other societies to avoid clashes."
+                                   styleClass="feature-card-desc" wrapText="true">
+                                <VBox.margin><Insets top="8"/></VBox.margin>
+                            </Label>
+                            <VBox styleClass="feature-list" spacing="6">
+                                <VBox.margin><Insets top="14"/></VBox.margin>
+                                <HBox alignment="CENTER_LEFT" spacing="8">
+                                    <Circle radius="2.5" fill="#34a853"/>
+                                    <Label text="Create &amp; manage events" styleClass="feature-list-item"/>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="8">
+                                    <Circle radius="2.5" fill="#34a853"/>
+                                    <Label text="Shared calendar view" styleClass="feature-list-item"/>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="8">
+                                    <Circle radius="2.5" fill="#34a853"/>
+                                    <Label text="Post announcements" styleClass="feature-list-item"/>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="8">
+                                    <Circle radius="2.5" fill="#34a853"/>
+                                    <Label text="View registration lists" styleClass="feature-list-item"/>
+                                </HBox>
+                            </VBox>
+                        </VBox>
+                    </VBox>
+
+                    <!-- Card 3: Sponsors (Red) -->
+                    <VBox styleClass="feature-card,fc-red" GridPane.columnIndex="2" spacing="0"
+                          fx:id="featureCard2" opacity="0" translateX="-160">
+                        <VBox spacing="0" styleClass="feature-card-inner">
+                            <padding><Insets top="28" right="24" bottom="28" left="24"/></padding>
+                            <StackPane styleClass="feature-icon,feature-icon-red" maxWidth="48" maxHeight="48" minWidth="48" minHeight="48" alignment="CENTER">
+                                <Label text="📊" style="-fx-font-size: 22px;"/>
+                            </StackPane>
+                            <Label text="SPONSORS" styleClass="feature-tag,feature-tag-red">
+                                <VBox.margin><Insets top="12"/></VBox.margin>
+                            </Label>
+                            <Label text="Find the right events to back" styleClass="feature-card-title">
+                                <VBox.margin><Insets top="10"/></VBox.margin>
+                            </Label>
+                            <Label text="Discover upcoming events, connect with societies, and track your sponsorship impact all in one dashboard."
+                                   styleClass="feature-card-desc" wrapText="true">
+                                <VBox.margin><Insets top="8"/></VBox.margin>
+                            </Label>
+                            <VBox styleClass="feature-list" spacing="6">
+                                <VBox.margin><Insets top="14"/></VBox.margin>
+                                <HBox alignment="CENTER_LEFT" spacing="8">
+                                    <Circle radius="2.5" fill="#ea4335"/>
+                                    <Label text="Browse event listings" styleClass="feature-list-item"/>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="8">
+                                    <Circle radius="2.5" fill="#ea4335"/>
+                                    <Label text="Contact societies directly" styleClass="feature-list-item"/>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="8">
+                                    <Circle radius="2.5" fill="#ea4335"/>
+                                    <Label text="Submit sponsorship deals" styleClass="feature-list-item"/>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="8">
+                                    <Circle radius="2.5" fill="#ea4335"/>
+                                    <Label text="Track deal status" styleClass="feature-list-item"/>
+                                </HBox>
+                            </VBox>
+                        </VBox>
+                    </VBox>
+                </GridPane>
+            </VBox>
+
+            <!-- ═══ HOW IT WORKS SECTION ═══ -->
+            <VBox styleClass="how-section" spacing="0" fx:id="howSection" opacity="0" translateY="24">
+                <padding><Insets top="96" right="80" bottom="96" left="80"/></padding>
+
+                <Label text="SIMPLE BY DESIGN" styleClass="section-eyebrow"/>
+                <Label text="How UniVerse works" styleClass="section-title"/>
+
+                <HBox styleClass="steps-row" spacing="24" alignment="CENTER">
+                    <VBox.margin><Insets top="64"/></VBox.margin>
+
+                    <!-- Step 1 -->
+                    <VBox alignment="CENTER" spacing="8" HBox.hgrow="ALWAYS" fx:id="step0" opacity="0" translateY="20">
+                        <StackPane fx:id="stepCircle0" maxWidth="72" maxHeight="72" minWidth="72" minHeight="72"
+                                   scaleX="0" scaleY="0">
+                            <StackPane styleClass="step-circle,step-circle-blue" maxWidth="48" maxHeight="48" minWidth="48" minHeight="48">
+                                <Label text="1" styleClass="step-number"/>
+                            </StackPane>
+                        </StackPane>
+                        <Label text="Create your account" styleClass="step-title">
+                            <VBox.margin><Insets top="12"/></VBox.margin>
+                        </Label>
+                        <Label text="Sign up as a student, society manager, sponsor, or admin with your university email."
+                               styleClass="step-desc" wrapText="true" textAlignment="CENTER" maxWidth="200"/>
+                    </VBox>
+
+                    <!-- Step 2 -->
+                    <VBox alignment="CENTER" spacing="8" HBox.hgrow="ALWAYS" fx:id="step1" opacity="0" translateY="20">
+                        <StackPane fx:id="stepCircle1" maxWidth="72" maxHeight="72" minWidth="72" minHeight="72"
+                                   scaleX="0" scaleY="0">
+                            <StackPane styleClass="step-circle,step-circle-red" maxWidth="48" maxHeight="48" minWidth="48" minHeight="48">
+                                <Label text="2" styleClass="step-number"/>
+                            </StackPane>
+                        </StackPane>
+                        <Label text="Explore events" styleClass="step-title">
+                            <VBox.margin><Insets top="12"/></VBox.margin>
+                        </Label>
+                        <Label text="Browse the central event feed. Filter by date, society, type, or availability."
+                               styleClass="step-desc" wrapText="true" textAlignment="CENTER" maxWidth="200"/>
+                    </VBox>
+
+                    <!-- Step 3 -->
+                    <VBox alignment="CENTER" spacing="8" HBox.hgrow="ALWAYS" fx:id="step2" opacity="0" translateY="20">
+                        <StackPane fx:id="stepCircle2" maxWidth="72" maxHeight="72" minWidth="72" minHeight="72"
+                                   scaleX="0" scaleY="0">
+                            <StackPane styleClass="step-circle,step-circle-green" maxWidth="48" maxHeight="48" minWidth="48" minHeight="48">
+                                <Label text="3" styleClass="step-number"/>
+                            </StackPane>
+                        </StackPane>
+                        <Label text="Register or create" styleClass="step-title">
+                            <VBox.margin><Insets top="12"/></VBox.margin>
+                        </Label>
+                        <Label text="Students register in one click. Societies create and manage events from their dashboard."
+                               styleClass="step-desc" wrapText="true" textAlignment="CENTER" maxWidth="200"/>
+                    </VBox>
+
+                    <!-- Step 4 -->
+                    <VBox alignment="CENTER" spacing="8" HBox.hgrow="ALWAYS" fx:id="step3" opacity="0" translateY="20">
+                        <StackPane fx:id="stepCircle3" maxWidth="72" maxHeight="72" minWidth="72" minHeight="72"
+                                   scaleX="0" scaleY="0">
+                            <StackPane styleClass="step-circle,step-circle-yellow" maxWidth="48" maxHeight="48" minWidth="48" minHeight="48">
+                                <Label text="4" styleClass="step-number"/>
+                            </StackPane>
+                        </StackPane>
+                        <Label text="Stay connected" styleClass="step-title">
+                            <VBox.margin><Insets top="12"/></VBox.margin>
+                        </Label>
+                        <Label text="Get real-time notifications. Sponsors connect with societies. Admins keep it all in order."
+                               styleClass="step-desc" wrapText="true" textAlignment="CENTER" maxWidth="200"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <!-- ═══ CTA SECTION ═══ -->
+            <VBox styleClass="cta-section" alignment="CENTER" spacing="0" fx:id="ctaSection" opacity="0" translateY="24">
+                <padding><Insets top="96" right="80" bottom="96" left="80"/></padding>
+
+                <Label text="Ready to join UniVerse?" styleClass="cta-title"/>
+                <Label text="The centralized hub for all university society events — built for NUCES." styleClass="cta-subtitle">
+                    <VBox.margin><Insets top="16" bottom="36"/></VBox.margin>
+                </Label>
+                <HBox alignment="CENTER" spacing="14">
+                    <Button text="Open the Dashboard" styleClass="btn-cta-primary" onAction="#handleOpenDashboard"/>
+                    <Button text="Sign in →" styleClass="btn-cta-ghost" onAction="#handleOpenDashboard"/>
+                </HBox>
+            </VBox>
+
+            <!-- ═══ FOOTER ═══ -->
+            <VBox styleClass="footer-section reveal" spacing="0" fx:id="footerSection">
+                <padding><Insets top="56" right="80" bottom="32" left="80"/></padding>
+
+                <GridPane styleClass="footer-top" hgap="48" vgap="0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="35"/>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="21.66"/>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="21.66"/>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="21.66"/>
+                    </columnConstraints>
+
+                    <VBox GridPane.columnIndex="0" spacing="12">
+                        <HBox alignment="CENTER_LEFT" spacing="10">
+                            <GridPane hgap="3" vgap="3" maxWidth="18">
+                                <Circle radius="3.5" fill="#ea4335" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                                <Circle radius="3.5" fill="#fbbc04" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                                <Circle radius="3.5" fill="#34a853" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                                <Circle radius="3.5" fill="#4285f4" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                            </GridPane>
+                            <Label text="UniVerse" styleClass="footer-logo-text"/>
+                        </HBox>
+                        <Label text="A centralized event and society management platform for university communities. Built with care for NUCES students."
+                               styleClass="footer-brand-desc" wrapText="true" maxWidth="260"/>
+                    </VBox>
+
+                    <VBox GridPane.columnIndex="1" spacing="8">
+                        <Label text="PLATFORM" styleClass="footer-col-title"/>
+                        <Label text="Events" styleClass="footer-link"/>
+                        <Label text="Societies" styleClass="footer-link"/>
+                        <Label text="Announcements" styleClass="footer-link"/>
+                        <Label text="Sponsors" styleClass="footer-link"/>
+                        <Label text="Admin Panel" styleClass="footer-link"/>
+                    </VBox>
+
+                    <VBox GridPane.columnIndex="2" spacing="8">
+                        <Label text="USERS" styleClass="footer-col-title"/>
+                        <Label text="For Students" styleClass="footer-link"/>
+                        <Label text="For Societies" styleClass="footer-link"/>
+                        <Label text="For Sponsors" styleClass="footer-link"/>
+                        <Label text="For Admins" styleClass="footer-link"/>
+                    </VBox>
+
+                    <VBox GridPane.columnIndex="3" spacing="8">
+                        <Label text="INFO" styleClass="footer-col-title"/>
+                        <Label text="About UniVerse" styleClass="footer-link"/>
+                        <Label text="SUM Technologies" styleClass="footer-link"/>
+                        <Label text="NUCES Islamabad" styleClass="footer-link"/>
+                        <Label text="Contact" styleClass="footer-link"/>
+                    </VBox>
+                </GridPane>
+
+                <Separator styleClass="footer-separator">
+                    <VBox.margin><Insets top="48" bottom="24"/></VBox.margin>
+                </Separator>
+
+                <HBox styleClass="footer-bottom" alignment="CENTER_LEFT" spacing="0">
+                    <Label text="© 2026 UniVerse · SUM Technologies · NUCES · Ubaid Ashraf, Mitul Dial, Muhammad Shahzaib Khan"
+                           styleClass="footer-copyright"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <HBox spacing="4" alignment="CENTER_RIGHT">
+                        <Circle radius="4" fill="#ea4335"/>
+                        <Circle radius="4" fill="#fbbc04"/>
+                        <Circle radius="4" fill="#34a853"/>
+                        <Circle radius="4" fill="#4285f4"/>
+                    </HBox>
+                </HBox>
+            </VBox>
+
+        </VBox>
+    </ScrollPane>
+</StackPane>

@@ -1,0 +1,863 @@
+/* ═══════════════════════════════════════════════════
+   UniVerse Dashboard — JavaFX CSS
+   ═══════════════════════════════════════════════════ */
+
+/* ── ROOT ── */
+.dashboard-root {
+    -fx-background-color: #ffffff;
+}
+
+/* ── TOP BAR ── */
+.dash-topbar {
+    -fx-min-height: 64;
+    -fx-pref-height: 64;
+    -fx-max-height: 64;
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent transparent #dadce0 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-effect: dropshadow(gaussian, rgba(60, 64, 67, 0.08), 6, 0, 0, 1);
+}
+
+.dash-logo-text {
+    -fx-font-size: 18;
+    -fx-font-weight: 600;
+    -fx-text-fill: #202124;
+    -fx-font-family: "Segoe UI";
+}
+
+.dash-search {
+    -fx-background-color: #f1f3f4;
+    -fx-background-radius: 100;
+    -fx-padding: 8 18;
+    -fx-border-color: transparent;
+    -fx-border-radius: 100;
+    -fx-border-width: 1.5;
+}
+
+.dash-search:focused {
+    -fx-border-color: #1a73e8;
+    -fx-background-color: white;
+}
+
+.dash-search-input {
+    -fx-background-color: transparent;
+    -fx-font-size: 14;
+    -fx-text-fill: #202124;
+    -fx-prompt-text-fill: #9aa0a6;
+    -fx-font-family: "Segoe UI";
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.dash-search-input:focused {
+    -fx-background-color: transparent;
+}
+
+.dash-notif {
+    -fx-background-color: #f1f3f4;
+    -fx-background-radius: 100;
+    -fx-cursor: hand;
+}
+
+.dash-notif:hover {
+    -fx-background-color: #e8eaed;
+}
+
+.notif-dot {
+    -fx-fill: #ea4335;
+}
+
+.dash-avatar {
+    -fx-background-color: #1a73e8;
+    -fx-background-radius: 100;
+    -fx-cursor: hand;
+}
+
+.dash-avatar:hover {
+    -fx-effect: dropshadow(gaussian, rgba(26, 115, 232, 0.25), 6, 0, 0, 0);
+}
+
+.dash-avatar-text {
+    -fx-text-fill: white;
+    -fx-font-size: 13;
+    -fx-font-weight: 600;
+    -fx-font-family: "Segoe UI";
+}
+
+.dash-close-btn {
+    -fx-background-color: #f1f3f4;
+    -fx-background-radius: 100;
+    -fx-padding: 6 14;
+    -fx-font-size: 13;
+    -fx-font-weight: 500;
+    -fx-text-fill: #5f6368;
+    -fx-cursor: hand;
+    -fx-font-family: "Segoe UI";
+}
+
+.dash-close-btn:hover {
+    -fx-background-color: #fce8e6;
+    -fx-text-fill: #ea4335;
+}
+
+/* ── TABS ── */
+.dash-tabs {
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent transparent #dadce0 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0 32;
+}
+
+.dash-tab {
+    -fx-background-color: transparent;
+    -fx-text-fill: #5f6368;
+    -fx-font-size: 14;
+    -fx-font-weight: 500;
+    -fx-padding: 16 36;
+    -fx-border-color: transparent transparent transparent transparent;
+    -fx-border-width: 0 0 2.5 0;
+    -fx-cursor: hand;
+    -fx-background-radius: 0;
+    -fx-font-family: "Segoe UI";
+    -fx-alignment: center;
+    -fx-content-display: text-only;
+}
+
+.dash-tab:hover {
+    -fx-text-fill: #202124;
+}
+
+.dash-tab:selected {
+    -fx-text-fill: #1a73e8;
+    -fx-border-color: transparent transparent #1a73e8 transparent;
+    -fx-border-width: 0 0 2.5 0;
+}
+
+.dash-tab-active {
+    -fx-border-width: 0 0 2.5 0;
+}
+
+.dash-tab-events.dash-tab-active {
+    -fx-text-fill: #1a73e8;
+    -fx-border-color: transparent transparent #1a73e8 transparent;
+}
+
+.dash-tab-societies.dash-tab-active {
+    -fx-text-fill: #34a853;
+    -fx-border-color: transparent transparent #34a853 transparent;
+}
+
+.dash-tab-announcements.dash-tab-active {
+    -fx-text-fill: #ea4335;
+    -fx-border-color: transparent transparent #ea4335 transparent;
+}
+
+.dash-tab-sponsors.dash-tab-active {
+    -fx-text-fill: #fbbc04;
+    -fx-border-color: transparent transparent #fbbc04 transparent;
+}
+
+.dash-tab-admin.dash-tab-active {
+    -fx-text-fill: #7b1fa2;
+    -fx-border-color: transparent transparent #7b1fa2 transparent;
+}
+
+.dash-tab:focused {
+    -fx-background-color: transparent;
+}
+
+.dash-tab-badge {
+    -fx-background-color: #1a73e8;
+    -fx-text-fill: white;
+    -fx-font-size: 10;
+    -fx-font-weight: 600;
+    -fx-padding: 1 6;
+    -fx-background-radius: 100;
+    -fx-font-family: "Segoe UI";
+}
+
+/* ── PANELS ── */
+.panel-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.panel-scroll>.viewport {
+    -fx-background-color: transparent;
+}
+
+.panel-scroll .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.panel-scroll .scroll-bar .thumb {
+    -fx-background-color: #dadce0;
+    -fx-background-radius: 4;
+}
+
+.dash-feed-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.dash-feed-scroll>.viewport {
+    -fx-background-color: transparent;
+}
+
+.dash-feed-scroll .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.dash-feed-scroll .scroll-bar .thumb {
+    -fx-background-color: #dadce0;
+    -fx-background-radius: 4;
+}
+
+/* ── WELCOME BANNER ── */
+.welcome-banner {
+    -fx-background-color: linear-gradient(to bottom right, #1a73e8, #1557b0);
+    -fx-background-radius: 24;
+    -fx-padding: 24 28 24 28;
+}
+
+.welcome-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+    -fx-font-weight: 500;
+    -fx-font-family: "Segoe UI";
+}
+
+.welcome-subtitle {
+    -fx-text-fill: rgba(255, 255, 255, 0.75);
+    -fx-font-size: 13;
+    -fx-font-family: "Segoe UI";
+}
+
+.btn-white {
+    -fx-background-color: white;
+    -fx-text-fill: #1a73e8;
+    -fx-background-radius: 100;
+    -fx-padding: 8 18;
+    -fx-font-size: 13;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+    -fx-font-family: "Segoe UI";
+}
+
+.btn-white:hover {
+    -fx-effect: dropshadow(gaussian, rgba(60, 64, 67, 0.12), 6, 0, 0, 2);
+}
+
+.btn-white-outline {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-text-fill: white;
+    -fx-border-color: rgba(255, 255, 255, 0.4);
+    -fx-border-width: 1.5;
+    -fx-border-radius: 100;
+    -fx-background-radius: 100;
+    -fx-padding: 8 18;
+    -fx-font-size: 13;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+    -fx-font-family: "Segoe UI";
+}
+
+.btn-white-outline:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ── DASHBOARD STATS ── */
+.dash-stat {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+}
+
+.dash-stat:hover {
+    -fx-effect: dropshadow(gaussian, rgba(60, 64, 67, 0.12), 6, 0, 0, 2);
+}
+
+.dash-stat-label-text {
+    -fx-font-size: 12;
+    -fx-text-fill: #5f6368;
+    -fx-font-weight: 500;
+    -fx-font-family: "Segoe UI";
+}
+
+.dash-stat-val {
+    -fx-font-size: 28;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+    -fx-padding: 6 0 0 0;
+    -fx-font-family: "Segoe UI";
+}
+
+.dash-stat-change-green {
+    -fx-font-size: 12;
+    -fx-text-fill: #34a853;
+    -fx-font-weight: 500;
+    -fx-padding: 4 0 0 0;
+    -fx-font-family: "Segoe UI";
+}
+
+.dash-stat-change-yellow {
+    -fx-font-size: 12;
+    -fx-text-fill: #fbbc04;
+    -fx-font-weight: 500;
+    -fx-padding: 4 0 0 0;
+    -fx-font-family: "Segoe UI";
+}
+
+/* ── FEED EVENTS ── */
+.feed-section-title {
+    -fx-font-size: 13;
+    -fx-font-weight: 600;
+    -fx-text-fill: #5f6368;
+    -fx-font-family: "Segoe UI";
+}
+
+.feed-event {
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-background-color: rgba(255, 255, 255, 0.85);
+    -fx-cursor: hand;
+}
+
+.feed-event:hover {
+    -fx-border-color: #1a73e8;
+    -fx-effect: dropshadow(gaussian, rgba(60, 64, 67, 0.12), 6, 0, 0, 2);
+}
+
+.feed-month {
+    -fx-font-size: 10;
+    -fx-font-weight: 700;
+    -fx-font-family: "Segoe UI";
+}
+
+.feed-day {
+    -fx-font-size: 28;
+    -fx-font-weight: 300;
+    -fx-text-fill: #202124;
+    -fx-font-family: "Segoe UI";
+}
+
+.feed-event-title {
+    -fx-font-size: 14;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+    -fx-font-family: "Segoe UI";
+}
+
+.feed-event-venue {
+    -fx-font-size: 13;
+    -fx-text-fill: #5f6368;
+    -fx-font-family: "Segoe UI";
+}
+
+.feed-deadline {
+    -fx-font-size: 11;
+    -fx-text-fill: #9aa0a6;
+    -fx-font-family: "Segoe UI";
+}
+
+.chip {
+    -fx-font-size: 12;
+    -fx-padding: 3 10;
+    -fx-background-radius: 100;
+    -fx-border-radius: 100;
+    -fx-border-width: 1;
+    -fx-border-color: #dadce0;
+    -fx-text-fill: #5f6368;
+    -fx-background-color: transparent;
+    -fx-font-family: "Segoe UI";
+}
+
+.chip-blue {
+    -fx-border-color: rgba(26, 115, 232, 0.3);
+    -fx-text-fill: #1a73e8;
+    -fx-background-color: #e8f0fe;
+}
+
+.chip-green {
+    -fx-border-color: rgba(52, 168, 83, 0.3);
+    -fx-text-fill: #34a853;
+    -fx-background-color: #e6f4ea;
+}
+
+.chip-red {
+    -fx-border-color: rgba(234, 67, 53, 0.3);
+    -fx-text-fill: #ea4335;
+    -fx-background-color: #fce8e6;
+}
+
+.chip-yellow {
+    -fx-border-color: rgba(251, 188, 4, 0.3);
+    -fx-text-fill: #b06000;
+    -fx-background-color: #fef7e0;
+}
+
+.chip-default {
+    -fx-border-color: #dadce0;
+    -fx-text-fill: #5f6368;
+    -fx-background-color: transparent;
+}
+
+.btn-register {
+    -fx-background-color: #1a73e8;
+    -fx-text-fill: white;
+    -fx-background-radius: 100;
+    -fx-padding: 7 16;
+    -fx-font-size: 13;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+    -fx-font-family: "Segoe UI";
+}
+
+.btn-register:hover {
+    -fx-background-color: #1557b0;
+}
+
+.btn-registered {
+    -fx-background-color: #34a853;
+}
+
+.btn-registered:hover {
+    -fx-background-color: #34a853;
+}
+
+.btn-register-disabled {
+    -fx-background-color: #9aa0a6;
+    -fx-opacity: 0.8;
+}
+
+/* ── SIDEBAR / CALENDAR ── */
+.dash-sidebar {
+    -fx-border-color: #dadce0 transparent transparent transparent;
+    -fx-border-width: 0 0 0 1;
+    -fx-background-color: rgba(248, 249, 250, 0.8);
+}
+
+.mini-cal-title {
+    -fx-font-size: 14;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+    -fx-font-family: "Segoe UI";
+}
+
+.mini-cal-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #5f6368;
+    -fx-font-size: 14;
+    -fx-padding: 0 6;
+    -fx-background-radius: 100;
+    -fx-cursor: hand;
+    -fx-min-width: 26;
+    -fx-min-height: 26;
+    -fx-max-width: 26;
+    -fx-max-height: 26;
+    -fx-font-family: "Segoe UI";
+}
+
+.mini-cal-btn:hover {
+    -fx-background-color: #f1f3f4;
+}
+
+.cal-cell {
+    -fx-font-size: 12;
+    -fx-padding: 5 2;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-text-fill: #202124;
+    -fx-font-family: "Segoe UI";
+    -fx-alignment: center;
+}
+
+.cal-header {
+    -fx-text-fill: #9aa0a6;
+    -fx-font-weight: 600;
+    -fx-font-size: 11;
+    -fx-cursor: default;
+}
+
+.cal-cell:hover {
+    -fx-background-color: #f1f3f4;
+}
+
+.cal-today {
+    -fx-background-color: #1a73e8;
+    -fx-text-fill: white;
+    -fx-font-weight: 500;
+}
+
+.cal-today:hover {
+    -fx-background-color: #1557b0;
+}
+
+.cal-has-event {
+    -fx-text-fill: #1a73e8;
+    -fx-font-weight: 600;
+}
+
+.cal-other-month {
+    -fx-text-fill: #9aa0a6;
+}
+
+.cal-selected {
+    -fx-background-color: #e8f0fe;
+    -fx-text-fill: #1a73e8;
+    -fx-font-weight: 500;
+}
+
+.day-event-box {
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-padding: 14;
+}
+
+.day-event-title {
+    -fx-font-weight: 600;
+    -fx-text-fill: #202124;
+    -fx-font-size: 13;
+    -fx-font-family: "Segoe UI";
+}
+
+.day-event-meta {
+    -fx-text-fill: #5f6368;
+    -fx-font-size: 12;
+    -fx-font-family: "Segoe UI";
+    -fx-padding: 4 0 0 0;
+}
+
+.day-event-chip {
+    -fx-font-size: 11;
+    -fx-padding: 2 8;
+    -fx-background-radius: 100;
+    -fx-font-family: "Segoe UI";
+}
+
+.day-event-empty {
+    -fx-text-fill: #9aa0a6;
+    -fx-font-size: 13;
+    -fx-alignment: center;
+    -fx-padding: 20;
+    -fx-font-family: "Segoe UI";
+}
+
+/* ── SOCIETIES ── */
+.societies-panel {
+    -fx-background-color: transparent;
+}
+
+.soc-card {
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1;
+    -fx-border-radius: 24;
+    -fx-background-radius: 24;
+    -fx-background-color: rgba(255, 255, 255, 0.88);
+    -fx-cursor: hand;
+}
+
+.soc-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(60, 64, 67, 0.15), 16, 0, 0, 4);
+}
+
+.soc-card-banner {
+    -fx-min-height: 80;
+    -fx-pref-height: 80;
+    -fx-background-radius: 24 24 0 0;
+}
+
+.soc-card-avatar {
+    -fx-background-radius: 12;
+    -fx-border-color: white;
+    -fx-border-width: 3;
+    -fx-border-radius: 12;
+}
+
+.soc-card-name {
+    -fx-font-size: 15;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+    -fx-font-family: "Segoe UI";
+}
+
+.soc-card-desc {
+    -fx-font-size: 13;
+    -fx-text-fill: #5f6368;
+    -fx-font-family: "Segoe UI";
+    -fx-line-spacing: 3;
+}
+
+.soc-members {
+    -fx-font-size: 12;
+    -fx-text-fill: #9aa0a6;
+    -fx-font-family: "Segoe UI";
+}
+
+.btn-follow {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1a73e8;
+    -fx-border-color: #1a73e8;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 100;
+    -fx-background-radius: 100;
+    -fx-padding: 5 14;
+    -fx-font-size: 12;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+    -fx-font-family: "Segoe UI";
+}
+
+.btn-follow:hover {
+    -fx-background-color: #1a73e8;
+    -fx-text-fill: white;
+}
+
+.btn-following {
+    -fx-background-color: #1a73e8;
+    -fx-text-fill: white;
+}
+
+.btn-following:hover {
+    -fx-background-color: #1557b0;
+    -fx-text-fill: white;
+}
+
+/* ── ANNOUNCEMENTS ── */
+.announce-panel {
+    -fx-background-color: transparent;
+}
+
+.announce-item {
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-background-color: rgba(255, 255, 255, 0.85);
+}
+
+.announce-item:hover {
+    -fx-effect: dropshadow(gaussian, rgba(60, 64, 67, 0.12), 6, 0, 0, 2);
+}
+
+.announce-icon {
+    -fx-background-radius: 12;
+}
+
+.announce-title {
+    -fx-font-size: 14;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+    -fx-font-family: "Segoe UI";
+}
+
+.announce-body {
+    -fx-font-size: 13;
+    -fx-text-fill: #5f6368;
+    -fx-font-family: "Segoe UI";
+    -fx-line-spacing: 4;
+}
+
+.announce-meta-text {
+    -fx-font-size: 11;
+    -fx-text-fill: #9aa0a6;
+    -fx-font-family: "Segoe UI";
+}
+
+.announce-important {
+    -fx-text-fill: #ea4335;
+    -fx-font-size: 11;
+    -fx-font-weight: 600;
+    -fx-font-family: "Segoe UI";
+}
+
+/* ── PANEL HEADINGS ── */
+.panel-heading {
+    -fx-font-size: 22;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+    -fx-font-family: "Segoe UI";
+}
+
+.panel-subheading {
+    -fx-font-size: 14;
+    -fx-text-fill: #5f6368;
+    -fx-font-family: "Segoe UI";
+}
+
+/* ── ADMIN / SPONSORS CARDS ── */
+.admin-card {
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1;
+    -fx-border-radius: 24;
+    -fx-background-radius: 24;
+    -fx-background-color: rgba(255, 255, 255, 0.85);
+}
+
+.admin-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(60, 64, 67, 0.12), 6, 0, 0, 2);
+}
+
+.admin-card-title {
+    -fx-font-size: 15;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+    -fx-font-family: "Segoe UI";
+}
+
+.admin-card-desc {
+    -fx-font-size: 13;
+    -fx-text-fill: #5f6368;
+    -fx-font-family: "Segoe UI";
+    -fx-padding: 6 0 14 0;
+}
+
+.pending-item {
+    -fx-background-color: rgba(248, 249, 250, 0.9);
+    -fx-background-radius: 8;
+}
+
+.pending-item-name {
+    -fx-font-size: 13;
+    -fx-font-weight: 500;
+    -fx-text-fill: #202124;
+    -fx-font-family: "Segoe UI";
+}
+
+.pending-item-sec {
+    -fx-font-size: 12;
+    -fx-text-fill: #5f6368;
+    -fx-font-family: "Segoe UI";
+}
+
+.btn-approve {
+    -fx-background-color: #e6f4ea;
+    -fx-text-fill: #34a853;
+    -fx-border-color: rgba(52, 168, 83, 0.3);
+    -fx-border-width: 1;
+    -fx-border-radius: 100;
+    -fx-background-radius: 100;
+    -fx-padding: 3 10;
+    -fx-font-size: 12;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+    -fx-font-family: "Segoe UI";
+}
+
+.btn-approve:hover {
+    -fx-background-color: rgba(52, 168, 83, 0.15);
+}
+
+.btn-reject {
+    -fx-background-color: #fce8e6;
+    -fx-text-fill: #ea4335;
+    -fx-border-color: rgba(234, 67, 53, 0.3);
+    -fx-border-width: 1;
+    -fx-border-radius: 100;
+    -fx-background-radius: 100;
+    -fx-padding: 3 10;
+    -fx-font-size: 12;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+    -fx-font-family: "Segoe UI";
+}
+
+.btn-reject:hover {
+    -fx-background-color: rgba(234, 67, 53, 0.15);
+}
+
+.status-badge-yellow {
+    -fx-background-color: #fef7e0;
+    -fx-text-fill: #b06000;
+    -fx-padding: 2 8;
+    -fx-background-radius: 10;
+    -fx-font-size: 11;
+    -fx-font-family: "Segoe UI";
+}
+
+.status-badge-green {
+    -fx-background-color: #e6f4ea;
+    -fx-text-fill: #34a853;
+    -fx-padding: 2 8;
+    -fx-background-radius: 10;
+    -fx-font-size: 11;
+    -fx-font-family: "Segoe UI";
+}
+
+/* ── SPONSORS PANEL ── */
+.sponsors-panel {
+    -fx-background-color: transparent;
+}
+
+/* ── ADMIN PANEL ── */
+.admin-panel {
+    -fx-background-color: transparent;
+}
+
+/* ── SOCIETY DASHBOARD CARDS ── */
+.soc-event-card {
+    -fx-border-color: #dadce0;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-background-color: rgba(255, 255, 255, 0.88);
+}
+
+.soc-event-card:hover {
+    -fx-border-color: #1a73e8;
+    -fx-effect: dropshadow(gaussian, rgba(60, 64, 67, 0.12), 6, 0, 0, 2);
+}
+
+.soc-toggle-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1a73e8;
+    -fx-font-size: 12;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+    -fx-padding: 4 12;
+    -fx-border-color: rgba(26, 115, 232, 0.3);
+    -fx-border-width: 1;
+    -fx-border-radius: 100;
+    -fx-background-radius: 100;
+    -fx-font-family: "Segoe UI";
+}
+
+.soc-toggle-btn:hover {
+    -fx-background-color: #e8f0fe;
+}
+
+.soc-action-menu {
+    -fx-background-color: transparent;
+    -fx-text-fill: #5f6368;
+    -fx-font-size: 14;
+    -fx-cursor: hand;
+    -fx-padding: 2 6;
+    -fx-background-radius: 100;
+    -fx-font-family: "Segoe UI";
+}
+
+.soc-action-menu:hover {
+    -fx-background-color: #f1f3f4;
+}
+
+.soc-action-menu .arrow {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-shape: "";
+}
+
+.status-badge-red {
+    -fx-background-color: #fce8e6;
+    -fx-text-fill: #ea4335;
+    -fx-padding: 2 8;
+    -fx-background-radius: 10;
+    -fx-font-size: 11;
+    -fx-font-family: "Segoe UI";
+}
