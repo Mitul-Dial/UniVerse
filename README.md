@@ -38,7 +38,7 @@ The system supports four distinct user roles **Student**, **Society**, **Sponsor
 ## Application Preview
 
 <p align="center">
-  <img src="assets/sda%20gif.gif" alt="UniVerse Demo" width="100%">
+  <video src="assets/DEMO.mp4" alt="UniVerse Demo" width="100%" controls></video>
 </p>
 
 ---
