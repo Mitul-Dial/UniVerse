@@ -37,9 +37,9 @@ The system supports four distinct user roles **Student**, **Society**, **Sponsor
 
 ## Application Preview
 
-<p align="center">
-  <video src="assets/DEMO.mp4" alt="UniVerse Demo" width="100%" controls></video>
-</p>
+A full walkthrough of the UniVerse platform is available in the demo video below:
+
+📹 **Demo Video:** [DEMO.mp4](assets/DEMO.mp4)
 
 ---
 
