@@ -286,7 +286,7 @@ This project was completed collaboratively as part of an academic software engin
 |------|--------|
 | Mitul Dial | [https://github.com/Mitul-Dial] |
 | Ubaid Ashraf | [https://github.com/Ubaidashraf5] |
-| Muhammad Shahzaib Khan | [https://github.com/Shahzaib-khan05] |
+| Muhammad Shahzaib Khan | [https://github.com/shahzaib-khan0912] |
 
 ---
 
